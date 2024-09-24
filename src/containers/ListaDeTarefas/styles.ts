@@ -6,3 +6,10 @@ export const Container = styled.main`
   /* Caso o conteúdo transborde o 100vh, faça um scroll, mas continue com a altura 100vh */
   overflow-y: scroll;
 `
+export const Resultado = styled.p`
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+`

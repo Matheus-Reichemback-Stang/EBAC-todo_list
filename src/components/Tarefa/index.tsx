@@ -1,15 +1,46 @@
+import { useState } from 'react'
 import * as S from './styles'
 
-const Tarefa = () => {
+import * as enums from '../../utils/enums/Tarefa'
+
+type Props = {
+  titulo: string
+  prioridade: enums.Prioridade
+  status: enums.Status
+  descricao: string
+}
+
+const Tarefa = ({ titulo, prioridade, status, descricao }: Props) => {
+  const [estaEditanto, setEstaEditando] = useState(false)
+
   return (
     <S.Card>
-      <S.Titulo>Nome da Tarefa</S.Titulo>
-      <S.Tag>Importante</S.Tag>
-      <S.Tag>Pendente</S.Tag>
-      <S.Descricao />
+      <S.Titulo>{titulo}</S.Titulo>
+      <S.Tag parametro="prioridade" prioridade={prioridade}>
+        {prioridade}
+      </S.Tag>
+      <S.Tag parametro="status" status={status}>
+        {status}
+      </S.Tag>
+      <S.Descricao value={descricao} />
       <S.BarraAcoes>
-        <S.Botao>Editar</S.Botao>
-        <S.Botao>Remover</S.Botao>
+        {estaEditanto ? (
+          <>
+            <S.BotaoSalvar>Salvar</S.BotaoSalvar>
+            <S.BotaoCancelarERemover
+              onClick={() => setEstaEditando(!estaEditanto)}
+            >
+              Cancelar
+            </S.BotaoCancelarERemover>
+          </>
+        ) : (
+          <>
+            <S.Botao onClick={() => setEstaEditando(!estaEditanto)}>
+              Editar
+            </S.Botao>
+            <S.BotaoCancelarERemover>Remover</S.BotaoCancelarERemover>
+          </>
+        )}
       </S.BarraAcoes>
     </S.Card>
   )

@@ -8,7 +8,6 @@ import { MainContainer, Titulo, Campo, BotaoSalvar } from '../../styles'
 import { Form, Opcoes, Opcao } from './styles'
 
 import * as enums from '../../utils/enums/Tarefa'
-import Tarefa from '../../models/Tarefa'
 
 const Formulario = () => {
   const dispatch = useDispatch()
@@ -21,15 +20,15 @@ const Formulario = () => {
   // O FormEvent é um tipo do React para configurar o submit de um form
   const cadastrarTarefa = (evento: FormEvent) => {
     evento.preventDefault()
-    const tarefaParaAdicionar = new Tarefa(
-      234,
-      titulo,
-      descricao,
-      prioridade,
-      enums.Status.PENDENTE
-    )
 
-    dispatch(cadastrar(tarefaParaAdicionar))
+    dispatch(
+      cadastrar({
+        titulo,
+        descricao,
+        prioridade,
+        status: enums.Status.PENDENTE
+      })
+    )
     // Faz o retorno automatico para a rota definida quando executado
     navigate('/')
   }

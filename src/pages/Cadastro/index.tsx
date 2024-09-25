@@ -1,8 +1,11 @@
+import BarraLateral from '../../containers/BarraLateral'
+import Formulario from '../../containers/Formulario'
+
 const Cadastro = () => {
   return (
     <>
-      <h1>Nova tarefa</h1>
-      <h2>Para hoje</h2>
+      <BarraLateral />
+      <Formulario />
     </>
   )
 }

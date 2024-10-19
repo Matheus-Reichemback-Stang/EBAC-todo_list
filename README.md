@@ -8,7 +8,7 @@
 #### Aviso ⚠️
 > Antes de começar a descrever sobre o projeto, **deixo claro** que todos os meus repositórios que iniciam com o nome **"EBAC"**, eu desenvolvi o código desses repositórios junto as aulas que faço no curso ***Full-Stack Java*** na plataforma da **EBAC** ***(Escola Britânica de Artes Criativa & Tecnologia)***. Então, se você entrar em um repositório que **não contenha** o título **EBAC**, se trata de uma criação própria minha, e se entrar em um repositório que **possuí/contenha** o nome **EBAC**, o código dele foi desenvolvido com as experiências e conhecimentos que meus professores passavam enquanto eu assistia as aulas do meu curso e desenvolvia o código junto com eles.
 
-Nesse projeto foi criado um site de **lista de tarefas**, onde cada tarefa possuí um **_tipo de prioridade_** e **_status de pendência_**, junto a isso, ao lado esquerdo do site, há uma sidebar que serve como filtragem.
+Nesse projeto foi criado um site de **lista de tarefas**, onde cada tarefa possui um **_tipo de prioridade_** e **_status de pendência_**, junto a isso, ao lado esquerdo do site, há uma sidebar que serve como filtragem.
 Caso ainda não tenha visto a página, clique [aqui](https://zkd-to-do-list.netlify.app/ "Visitar página").
 
 ***
